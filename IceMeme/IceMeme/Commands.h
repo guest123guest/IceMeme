@@ -278,10 +278,6 @@ void Commands(std::string cmd) {
 			else {
 				rlua_getfield(luaState, -1, In.at(1).c_str());
 			}
-			rlua_getfield(luaState, -1, "Character");
-			rlua_getfield(luaState, -1, "Humanoid");
-			rlua_pushstring(luaState, "20");
-			rlua_setfield(luaState, -2, "HipHeight");
 
 			rlua_getglobal(luaState, "game");
 			rlua_getfield(luaState, -1, "Players");
